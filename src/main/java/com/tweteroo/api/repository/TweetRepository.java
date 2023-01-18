@@ -1,5 +1,9 @@
 package com.tweteroo.api.repository;
 
-public class TweetRepository {
-  
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.tweteroo.api.model.Tweet;
+
+public interface TweetRepository extends JpaRepository<Tweet, Long> {
+
 }

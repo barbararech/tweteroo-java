@@ -24,7 +24,7 @@ public class UsersController {
   public List<Users> listAll() {
     return repository.findAll();
   }
-  
+
   @PostMapping
   public void createUser(@RequestBody UsersDTO req) {
     repository.save(new Users(req));
