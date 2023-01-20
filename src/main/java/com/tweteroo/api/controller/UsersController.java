@@ -11,23 +11,23 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.tweteroo.api.dto.UsersDTO;
 import com.tweteroo.api.model.Users;
-import com.tweteroo.api.repository.UsersRepository;
+import com.tweteroo.api.services.UsersService;
 
 @RestController
 @RequestMapping("/sign-up")
 public class UsersController {
-  
+
   @Autowired
-  private UsersRepository repository;
+  private UsersService service;
 
   @GetMapping
   public List<Users> listAll() {
-    return repository.findAll();
+    return service.findAll();
   }
 
   @PostMapping
   public void createUser(@RequestBody UsersDTO req) {
-    repository.save(new Users(req));
+    service.save(req);
     System.out.println("OK");
   }
 }
