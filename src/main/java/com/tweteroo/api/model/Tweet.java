@@ -16,7 +16,7 @@ import lombok.NoArgsConstructor;
 public class Tweet {
   public Tweet(TweetDTO data) {
     this.username = data.username();
-    this.avatar = data.avatar();
+    // this.avatar = data.avatar();
     this.text = data.text();
   }
 

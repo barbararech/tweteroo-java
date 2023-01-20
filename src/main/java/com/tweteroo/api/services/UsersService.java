@@ -23,4 +23,8 @@ public class UsersService {
     return repository.save(new Users(dto));
   }
 
+  public Users findByUsername(String username) {
+    return repository.findByUsername(username);
+  }
+
 }
